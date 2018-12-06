@@ -33,10 +33,10 @@ json-view .function {
   color: green;
 }
 
-.open .children {
+json-view .open .children {
   display: block;
 }
-.closed .children {
+json-view .closed .children {
   display: none;
 }
 

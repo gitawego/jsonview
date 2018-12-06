@@ -13,6 +13,21 @@ class JsonView extends HTMLElement {
         this.render();
       }
     });
+    this.addEventListener("click", this.toggleView);
+  }
+  disconnectedCallback() {
+    this.removeEventListener("click", this.toggleView);
+  }
+  toggleView(evt) {
+    const node = evt.target.closest(".header");
+    console.log(node);
+    const pNode = node.parentNode;
+    if (!pNode) {
+      return;
+    }
+    const closed = pNode.classList.contains("closed");
+    pNode.classList[closed ? "add" : "remove"]("open");
+    pNode.classList[closed ? "remove" : "add"]("closed");
   }
   render() {
     this.innerHTML = this[
@@ -27,7 +42,7 @@ class JsonView extends HTMLElement {
   }
   renderArray(items, name) {
     const html = [
-      '<div class="package array">',
+      '<div class="package array open">',
       name
         ? `<div class="header"><span class="name">${name}</span><span class="type">array</span></div>`
         : "",
@@ -56,7 +71,7 @@ class JsonView extends HTMLElement {
   renderObject(item, name) {
     const keys = Object.keys(item);
     const html = [
-      '<div class="package object">',
+      '<div class="package object open">',
       name
         ? `<div class="header"><span class="name">${name}</span><span class="type">object</span></div>`
         : "",
