@@ -20,6 +20,9 @@ class JsonView extends HTMLElement {
   }
   toggleView(evt) {
     const node = evt.target.closest(".header");
+    if (!node) {
+      return;
+    }
     console.log(node);
     const pNode = node.parentNode;
     if (!pNode) {
@@ -99,7 +102,7 @@ class JsonView extends HTMLElement {
   renderPrimitive(item, key) {
     const type = this.typeof(item);
     item = String(item);
-    if (item.length > 20) {
+    if (item.length > 50) {
       item = `<textarea readonly>${item}</textarea>`;
     }
     return `<div class="package ${type}">
