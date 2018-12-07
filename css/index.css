@@ -16,12 +16,12 @@ json-view .name {
 }
 
 json-view .array {
-  background-color: #ffd8bb;
-  border: thin solid #ffb780;
+  background-color: #efefef;
+  border: thin solid #d6cac0;
 }
 json-view .object {
-  background-color: #e7f1fe;
-  border: thin solid #7da2ce;
+  background-color: #ffffff;
+  border: thin solid #868686;
 }
 json-view .string {
   color: red;
@@ -32,7 +32,9 @@ json-view .number {
 json-view .function {
   color: green;
 }
-
+json-view .children {
+  font-size: 12px;
+}
 json-view .open .children {
   display: block;
 }
