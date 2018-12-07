@@ -1,3 +1,6 @@
+json-view > .package {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
 json-view .package {
   padding: 3px;
   border-radius: 2px;
@@ -6,34 +9,41 @@ json-view .package {
 json-view .header {
   cursor: pointer;
   border-bottom: 1px dashed #e0e0e0;
+  
 }
 json-view .header .name {
   font-weight: 700;
+  color:rgba(0,0,0,.54);
+}
+json-view .header .type {
+  color:rgba(0,0,0,.54);
 }
 
 json-view .name {
-  color: gray;
+  color: rgba(0,0,0,.87)
 }
 
 json-view .array {
-  background-color: #efefef;
-  border: thin solid #d6cac0;
+  background-color: #e0e0e0;
+  /* border: thin solid #d6cac0; */
+  border-bottom: 1px solid rgba(0,0,0,.25)
 }
 json-view .object {
   background-color: #ffffff;
-  border: thin solid #868686;
+  /* border: thin solid #868686; */
+  border-bottom: 1px solid rgba(0,0,0,.25)
 }
 json-view .string {
-  color: red;
+  color: #e2602a;
 }
 json-view .number {
-  color: blue;
+  color: #64943b;
 }
 json-view .function {
-  color: green;
+  color: #a4a91d;
 }
 json-view .children {
-  font-size: 12px;
+  font-size: 14px;
 }
 json-view .open .children {
   display: block;

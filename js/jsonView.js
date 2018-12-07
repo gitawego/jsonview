@@ -47,7 +47,7 @@ class JsonView extends HTMLElement {
     const html = [
       '<div class="package array open">',
       name
-        ? `<div class="header"><span class="name">${name}</span><span class="type">array</span></div>`
+        ? `<div class="header"><div class="arrow"></div><span class="name">${name}</span><span class="type">array</span></div>`
         : "",
       name ? '<div class="children">' : ""
     ];
@@ -76,7 +76,7 @@ class JsonView extends HTMLElement {
     const html = [
       '<div class="package object open">',
       name
-        ? `<div class="header"><span class="name">${name}</span><span class="type">object</span></div>`
+        ? `<div class="header"><div class="arrow"></div><span class="name">${name}</span><span class="type">object</span></div>`
         : "",
       name ? '<div class="children">' : ""
     ];
