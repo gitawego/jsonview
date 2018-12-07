@@ -14,20 +14,48 @@
       function render() {
         var node = document.querySelector("json-view");
         node.data = {
-          data: 1,
-          data2: 2,
-          data3: {
-            items: [
-              {
-                a: 1,
-                b: 2
-              },
-              {
-                tt: 2,
-                toto: 4
-              },
-              ["gitawego@gmail.com", "bingjie@gmail.com"]
-            ]
+          header: { version: "0.0.8", status: 1, message: "" },
+          response: [
+            { productLine: "Classic Cars", products: 38 },
+            { productLine: "Motorcycles", products: 13 },
+            { productLine: "Planes", products: 12 },
+            { productLine: "Ships", products: 9 },
+            { productLine: "Trains", products: 3 },
+            { productLine: "Trucks and Buses", products: 11 },
+            {
+              productLine:
+                "Vintage Carsa adfasdf asdf afasdf asdf asdfa sfasd fasdf asdf adsfasdf ads",
+              products: 24
+            }
+          ],
+          example: {
+            items: {
+              item: [
+                {
+                  id: "0001",
+                  type: "donut",
+                  name: "Cake",
+                  ppu: 0.55,
+                  batters: {
+                    batter: [
+                      { id: "1001", type: "Regular" },
+                      { id: "1002", type: "Chocolate" },
+                      { id: "1003", type: "Blueberry" },
+                      { id: "1004", type: "Devil's Food" }
+                    ]
+                  },
+                  topping: [
+                    { id: "5001", type: "None" },
+                    { id: "5002", type: "Glazed" },
+                    { id: "5005", type: "Sugar" },
+                    { id: "5007", type: "Powdered Sugar" },
+                    { id: "5006", type: "Chocolate with Sprinkles" },
+                    { id: "5003", type: "Chocolate" },
+                    { id: "5004", type: "Maple" }
+                  ]
+                }
+              ]
+            }
           }
         };
       }
